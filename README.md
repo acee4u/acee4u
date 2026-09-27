@@ -1,91 +1,99 @@
 <div align="center">
 
-```
-$ whoami
-```
+# prithwijit_ghosh
 
-# prithwijit-ghosh
+*a schema, not a sentence.*
 
-**System Architecture · Platform Engineering · AI/ML**
-Kolkata, IN
+**System Architecture · Platform Engineering · AI/ML** — Kolkata, IN
 
-[Portfolio](https://prithwig.vercel.app) · [Résumé](https://prithwig.vercel.app/prithwijit-ghosh-resume.pdf) · [Writing](https://prithwiblogs.vercel.app) · [LinkedIn](https://linkedin.com/in/greninja)
+[Portfolio](https://prithwig.vercel.app) · [Résumé](https://prithwig.vercel.app/prithwijit-ghosh-resume.pdf) · [Writing](https://prithwiblogs.vercel.app) · [LinkedIn](https://linkedin.com/in/greninja) · [dev.prith@proton.me](mailto:dev.prith@proton.me)
 
 </div>
 
----
-
-### `README.md`
-
-I build the parts of a system nobody notices until they break — financial ledgers, migration pipelines, cache layers, the release process itself. Currently doing that full-time on a production ERP that real companies run their money and inventory through. Off the clock, doing the same thing to satellite imagery and tattoo marketplaces, for less catastrophic stakes.
-
-Half the job is writing the feature. The other half is making sure it's still true six migrations later.
-
 <br>
 
-### `CHANGELOG.md`
+```sql
+-- migrations/000_init.sql
+-- Up
 
-```
-v3 — Rajwada Infotech · Sr. Software Developer            Mar 2026 – present
-    + full-stack ownership of a construction/civil-engineering ERP
-    + financial + inventory modules: reconciliation, stock tracking,
-      transaction processing across multiple business units
-    + role-based access control, configurable approval workflows — live
-      in production
-    + release engineering end-to-end: versioned deploys, SQL Server
-      migration authoring, zero-downtime cache invalidation across a
-      multi-container Docker stack (Node.js / SQL Server / Redis / Nginx)
-    fix: systemic balance-sheet discrepancy traced through a dozen
-         interdependent tables to root-cause in account-classification
-         logic + orphaned ledger entries
+CREATE TABLE prithwijit_ghosh (
+  based_in       TEXT      NOT NULL DEFAULT 'Kolkata, IN',
+  role           TEXT      NOT NULL DEFAULT 'Sr. Software Developer',
+  specializes_in TEXT[]    NOT NULL DEFAULT ARRAY['system architecture', 'platform engineering', 'ai/ml'],
+  currently      TEXT      NOT NULL DEFAULT 'building the parts of a system nobody notices until they break',
+  cgpa           NUMERIC   NOT NULL DEFAULT 8.17 CHECK (cgpa <= 10.0)
+);
 
-v2 — ShahparPay Solutions · Full Stack Developer            Mar – May 2026
-    + digital payments + distributor-ops platform (PHP/MySQL)
-    + admin dashboard: auth, activity tracking, reporting
-    + core DB architecture + external financial API integrations
-
-v1 — Techno India University · B.Tech CS (AI/ML)            2021 – 2025
-    + CGPA 8.17/10
-    + 🏆 AI Unite Hackathon — Winner (Epiphany)
-    + 🥈 Smart India Hackathon — Runner-up (Myrtle)
+-- Half the job is writing the feature.
+-- The other half is making sure it's still true six migrations later.
 ```
 
 <br>
 
-### `modules/`
+### `modules/` — things that shipped
 
 | module | what it does | stack |
 |---|---|---|
-| [**InkVisage**](https://github.com/GreNxNja/InkVisage) | AI tattoo platform — AR body preview, style-generation, Meilisearch-driven discovery, real-time multi-role marketplace | React · TypeScript · Prisma · Socket.io |
-| [**GeoVisionAI**](https://github.com/GreNxNja/GeoVisionAI) | Interpolates the gaps between satellite passes — encoder-decoder CNN turning stills into smooth cloud motion | Python · PyTorch · OpenLayers |
-| [**NextRead**](https://github.com/GreNxNja/nextRead-beta) | Book recommender trained on a reader's actual taste, not the bestseller list | TanStack · Supabase |
-| **Epiphany** | Study-path optimisation + an NLP tutor bot, load-tested to 100+ concurrent sessions | Next.js · Convex · Transformers |
+| [**InkVisage**](https://github.com/GreNxNja/InkVisage) | AI tattoo platform — AR body preview, style-generation, Meilisearch-driven discovery, real-time multi-role marketplace | `react` `typescript` `prisma` `socket.io` |
+| [**GeoVisionAI**](https://github.com/GreNxNja/GeoVisionAI) | Interpolates the gaps between satellite passes — encoder-decoder CNN turning stills into smooth cloud motion | `python` `pytorch` `openlayers` |
+| [**NextRead**](https://github.com/GreNxNja/nextRead-beta) | Book recommender trained on a reader's actual taste, not the bestseller list | `tanstack` `supabase` |
+| **Epiphany** 🏆 | Study-path optimisation + an NLP tutor bot, load-tested to 100+ concurrent sessions — AI Unite Hackathon winner | `next.js` `convex` `transformers` |
 
 <br>
 
-### `dependencies.lock`
+### `migrations/` — how we got here
 
-```yaml
-languages:   [typescript, python, java, cpp, sql]
-frontend:    [react, next.js, tanstack, tailwind]
-backend:     [node.js, express, hono, bun]
-data:        [postgresql, sql-server, supabase, prisma, redis]
-ml:          [pytorch, transformers]
-infra:       [aws-ec2, docker, nginx, n8n, oauth]
+```
+021_rajwada-infotech.sql       Mar 2026 → present   · Sr. Software Developer
+    ALTER SYSTEM ADD MODULE finance, inventory;
+    ALTER SYSTEM ADD workflow rbac, configurable_approvals;
+    -- release engineering owned end-to-end: versioned deploys, SQL Server
+    -- migration authoring, zero-downtime cache invalidation across a
+    -- multi-container stack (node.js / sql server / redis / nginx)
+    --
+    -- FIX: systemic balance-sheet discrepancy, traced through a dozen
+    -- interdependent tables to root-cause in account-classification
+    -- logic + orphaned ledger entries. no rollback needed — forward fix.
+
+014_shahparpay-solutions.sql   Mar 2026 → May 2026  · Full Stack Developer
+    CREATE TABLE payments, distributor_ops;
+    ALTER TABLE dashboard ADD auth, activity_log, reporting;
+    -- core db architecture + external financial API integrations
+
+001_techno-india-university.sql                     2021 → 2025
+    CREATE EXTENSION "ai/ml";
+    -- b.tech computer science, cgpa 8.17/10
+    -- 🏆 ai unite hackathon — winner   (epiphany)
+    -- 🥈 smart india hackathon — runner-up (myrtle)
 ```
 
 <br>
 
-### `docs/certifications.md`
+### `EXPLAIN ANALYZE` — the stack, by query cost
 
-Anthropic — MCP (2026) · Coursera/IBM — Data Science (2025) · Udemy — AI Mastery (2025) · Stanford — Machine Learning (2024) · IIT Bombay e-Yantra — Robotics/VLSI (2023)
+```
+Input   typescript · python · java · cpp · sql
+Drive   react · next.js · node.js · hono · bun · tanstack
+Tone    postgresql · sql server · supabase · prisma · redis · socket.io
+Infra   aws ec2 · docker · nginx · n8n · oauth
+Rack    pytorch · transformers
+```
 
 <br>
 
-### `SUPPORT.md`
+### `certifications.log`
 
-Open an issue, or just email — `dev.prith@proton.me`.
-Response time: usually faster than a production incident, slower than a hot reload.
+`anthropic` MCP · 2026 — `coursera/ibm` Data Science · 2025 — `udemy` AI Mastery · 2025 — `stanford` Machine Learning · 2024 — `iit bombay e-yantra` Robotics/VLSI · 2023
+
+<br>
+
+```sql
+-- migrations/000_init.sql
+-- Down
+
+-- rollback not available.
+-- this build is permanent — but PRs are welcome.
+```
 
 <div align="center">
 <br>
