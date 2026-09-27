@@ -1,105 +1,95 @@
 <div align="center">
 
-# Prithwijit Ghosh
+```
+$ whoami
+```
 
-**Building sentient AI so I can enjoy my guitar sessions in peace.**
+# prithwijit-ghosh
 
-Kolkata, IN · System Architecture · Platform Engineering · AI / ML
+**System Architecture · Platform Engineering · AI/ML**
+Kolkata, IN
 
 [Portfolio](https://prithwig.vercel.app) · [Résumé](https://prithwig.vercel.app/prithwijit-ghosh-resume.pdf) · [Writing](https://prithwiblogs.vercel.app) · [LinkedIn](https://linkedin.com/in/greninja)
 
 </div>
 
-<br>
+---
 
-## Liner Notes
+### `README.md`
 
-Two halves that keep arguing. One writes Python that stares at satellite imagery until cloud motion falls out of it. The other writes TypeScript that has to feel right in the hand within 100ms. The AI half keeps promising it'll automate the rest so the guitar half can get back to work.
+I build the parts of a system nobody notices until they break — financial ledgers, migration pipelines, cache layers, the release process itself. Currently doing that full-time on a production ERP that real companies run their money and inventory through. Off the clock, doing the same thing to satellite imagery and tattoo marketplaces, for less catastrophic stakes.
 
-Right now that means leading development on a production ERP that real companies run their money and inventory through — the kind of software where a rounding error is somebody's afternoon. Financial modules, stock tracking, approval workflows, and the release engineering that ships all of it without waking anyone up at 2am.
-
-A codebase is an argument about what you thought mattered. So is a setlist.
+Half the job is writing the feature. The other half is making sure it's still true six migrations later.
 
 <br>
 
-## Setlist
-
-Four things worth hovering over.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**[InkVisage](https://github.com/GreNxNja/InkVisage)** · *E2*
-An AI tattoo platform you can try on before you commit — AR body preview, style-based generation, Meilisearch-driven discovery, and a multi-role marketplace tying artists, shops and clients together in real time.
-`React` `TypeScript` `Prisma` `Socket.io` `Meilisearch`
-
-</td>
-<td width="50%" valign="top">
-
-**[GeoVisionAI](https://github.com/GreNxNja/GeoVisionAI)** · *A2*
-Satellites photograph the earth on a schedule — this invents the moments in between. An encoder-decoder CNN doing frame interpolation, turning stills into smooth, watchable cloud motion.
-`Python` `PyTorch` `OpenLayers` `WMS`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[NextRead](https://github.com/GreNxNja/nextRead-beta)** · *G3*
-A book recommender built from what a reader actually likes, not what's selling — with a dashboard that visualises the reading journey as it happens.
-`TanStack` `Supabase` `Google Books API`
-
-</td>
-<td width="50%" valign="top">
-
-**Epiphany** · *E4* · 🏆 AI Unite Hackathon Winner
-Study-path optimisation over what a student actually knows, plus an NLP chatbot on Transformers — architected to hold 100+ concurrent sessions without falling over.
-`Next.js` `Convex` `Clerk` `Transformers`
-
-</td>
-</tr>
-</table>
-
-<br>
-
-## The Rig
-
-Signal chain, input to amp — what I reach for first, in order.
+### `CHANGELOG.md`
 
 ```
-Input   TypeScript · Python · Java · C++ · SQL
-Drive   React · Next.js · Node.js · Hono · Bun · TanStack
-Tone    PostgreSQL · SQL Server · Supabase · Prisma · Socket.io · Tailwind
-Rack    PyTorch · Transformers · AWS · Docker · n8n · OAuth
+v3 — Rajwada Infotech · Sr. Software Developer            Mar 2026 – present
+    + full-stack ownership of a construction/civil-engineering ERP
+    + financial + inventory modules: reconciliation, stock tracking,
+      transaction processing across multiple business units
+    + role-based access control, configurable approval workflows — live
+      in production
+    + release engineering end-to-end: versioned deploys, SQL Server
+      migration authoring, zero-downtime cache invalidation across a
+      multi-container Docker stack (Node.js / SQL Server / Redis / Nginx)
+    fix: systemic balance-sheet discrepancy traced through a dozen
+         interdependent tables to root-cause in account-classification
+         logic + orphaned ledger entries
+
+v2 — ShahparPay Solutions · Full Stack Developer            Mar – May 2026
+    + digital payments + distributor-ops platform (PHP/MySQL)
+    + admin dashboard: auth, activity tracking, reporting
+    + core DB architecture + external financial API integrations
+
+v1 — Techno India University · B.Tech CS (AI/ML)            2021 – 2025
+    + CGPA 8.17/10
+    + 🏆 AI Unite Hackathon — Winner (Epiphany)
+    + 🥈 Smart India Hackathon — Runner-up (Myrtle)
 ```
 
 <br>
 
-## Tour Dates
+### `modules/`
 
-**Rajwada Infotech** — *Software Developer* · Mar 2026 – Present
-Leading full-stack development of an ERP platform for construction and civil engineering. Architected the financial and inventory modules — transaction processing, reconciliation, stock tracking — plus role-based access control and configurable approval workflows now running in live production. Own end-to-end release engineering: SQL Server migrations, cache invalidation, zero-downtime deploys across a multi-container stack.
-
-**ShahparPay Solutions** — *Full Stack Developer* · Mar 2026 – May 2026
-Built a digital payments and distributor operations platform in PHP/MySQL. Shipped an admin dashboard with auth, activity tracking and reporting. Designed the core database architecture and integrated external financial APIs end to end.
-
-<br>
-
-## Encore
-
-Got something *worth* building?
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/dev.prith%40proton.me-000000?style=flat-square&logo=protonmail&logoColor=white)](mailto:dev.prith@proton.me)
-[![GitHub](https://img.shields.io/badge/@GreNxNja-000000?style=flat-square&logo=github&logoColor=white)](https://github.com/GreNxNja)
-[![LinkedIn](https://img.shields.io/badge/in%2Fgreninja-000000?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/greninja)
-
-</div>
+| module | what it does | stack |
+|---|---|---|
+| [**InkVisage**](https://github.com/GreNxNja/InkVisage) | AI tattoo platform — AR body preview, style-generation, Meilisearch-driven discovery, real-time multi-role marketplace | React · TypeScript · Prisma · Socket.io |
+| [**GeoVisionAI**](https://github.com/GreNxNja/GeoVisionAI) | Interpolates the gaps between satellite passes — encoder-decoder CNN turning stills into smooth cloud motion | Python · PyTorch · OpenLayers |
+| [**NextRead**](https://github.com/GreNxNja/nextRead-beta) | Book recommender trained on a reader's actual taste, not the bestseller list | TanStack · Supabase |
+| **Epiphany** | Study-path optimisation + an NLP tutor bot, load-tested to 100+ concurrent sessions | Next.js · Convex · Transformers |
 
 <br>
 
+### `dependencies.lock`
+
+```yaml
+languages:   [typescript, python, java, cpp, sql]
+frontend:    [react, next.js, tanstack, tailwind]
+backend:     [node.js, express, hono, bun]
+data:        [postgresql, sql-server, supabase, prisma, redis]
+ml:          [pytorch, transformers]
+infra:       [aws-ec2, docker, nginx, n8n, oauth]
+```
+
+<br>
+
+### `docs/certifications.md`
+
+Anthropic — MCP (2026) · Coursera/IBM — Data Science (2025) · Udemy — AI Mastery (2025) · Stanford — Machine Learning (2024) · IIT Bombay e-Yantra — Robotics/VLSI (2023)
+
+<br>
+
+### `SUPPORT.md`
+
+Open an issue, or just email — `dev.prith@proton.me`.
+Response time: usually faster than a production incident, slower than a hot reload.
+
 <div align="center">
-<sub>Strings are simulated, not sampled — Karplus-Strong synthesis and the modal equation for a plucked string, in the portfolio linked above.</sub>
+<br>
+
+[github.com/GreNxNja](https://github.com/GreNxNja) · [linkedin.com/in/greninja](https://linkedin.com/in/greninja) · [prithwiblogs.vercel.app](https://prithwiblogs.vercel.app)
+
 </div>
