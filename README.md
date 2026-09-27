@@ -1,6 +1,6 @@
 <div align="center">
 
-# prithwi
+# prithwi.
 
 *a schema, not a sentence.*
 
